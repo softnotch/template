@@ -1,0 +1,48 @@
+.image{
+    display: block;
+   
+    max-width:100%;
+   
+    object-fit:contain;
+    zoom: 1;
+}
+
+    .image-cover{
+        margin-top: 100px;
+        width: 100%;
+        height: 413px;
+
+        
+        /* width: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;  */
+        display: block;
+        margin-bottom: 0;
+        min-height: 330px;
+    }
+
+    /* @media (min-width: 1140px)
+    #cover-memorial {
+    display: block;
+    margin-bottom: 0;
+    min-height: 330px;
+    }
+
+@media (min-width: 1px)
+ #cover-memorial {
+    min-height: 255px;
+} */
+
+/* #cover-memorial {
+    position: relative;
+    clear: both;
+    box-sizing: border-box;
+    padding: 0;
+    overflow: hidden;
+} */
+ #cover-memorial {
+    margin-top: 100px;
+    display: block;
+    background: url(../template/img/cover.webp)
+ }
