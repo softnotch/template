@@ -7,6 +7,7 @@ class ProjectTemplate(models.Model):
     title =models.CharField(max_length=100,blank=False)
     quote = models.CharField(max_length=250, blank=True)
     image = models.ImageField(upload_to='app/images/')
+    imageOverlay = models.CharField(max_length=7, blank=True)
     url = models.URLField(blank=True)
     footerColor=models.CharField(max_length=10, blank=True)
     bgColor=models.CharField(max_length=10, blank=True)

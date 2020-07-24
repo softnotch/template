@@ -1140,11 +1140,11 @@ and (min-device-width : 1199px)  {
 /* bio.html styles starts */
 
 /* 
-.bio-image {
+.overlay {
     background-image: url('img/Rectangle 37.png');
     position: relative;
   } */
-  .bio-image:before {
+  .overlay:before {
     content: "";
     position: absolute;
     left: 0; right: 0;

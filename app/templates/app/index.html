@@ -1,9 +1,10 @@
-{% extends "app/full.html" %}
+{% extends "app/base.html" %}
 
 {% load static %}
 
 <!doctype html>
 <html lang="en">
+{% block content %}
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -15,7 +16,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'app/css/style.css' %}">
     <title>InourMindsForever</title>
   </head>
-{% block content %}
+
     {% for project in projects %}
   <body class="" style="background:{{project.bgColor}}">
       <header class="mb-80px">
@@ -30,43 +31,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav justify-content-center mx-auto">
-                <!-- <li class="nav-item active">
-                  <a class="nav-link" href="Index.html">Home</a>
-                </li>
-                  <li class="nav-item">
-                  <a class="nav-link" href="about.html">About</a>
-                </li>
-               
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Memorials
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                     <a class="dropdown-item" href="mem-search.html">Browse memorials</a>
-                      <a class="dropdown-item" href="create-memorial.html">Create memorials</a>
-                      
-                    </div>
-                  </li>
                 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Testimonials</a>
-                  </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Resources
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="how.html">How it works</a>
-                    <a class="dropdown-item" href="about.html">FAQs</a>
-                    <a class="dropdown-item" href="contact.html">Contact us</a>
-                  </div>
-                </li> -->
               </ul>
               <ul class="navbar-nav justify-content-end ">
-                        <!-- <a class="nav-link" data-toggle="tooltip" data-placement="bottom" title="Search Memorials by their last names" href="#"><i class="fa fa-search mr-2"></i></a> -->
-                        <a class="nav-link btn  text-secondary" href="#"><i class="fa fa-volume-up"></i></a>   
+                          <a class="nav-link btn  text-secondary" href="#"><i class="fa fa-volume-up"></i></a>   
                         <a class="nav-link btn  text-secondary" href="#"><i class=" fa fa-volume-down"></i></a>   
-                        <a class="nav-link" href="login.html"><i class="fa fa-lock mr-2"></i>Sign in</a>
+                        <!-- <a class="nav-link" href="login.html"><i class="fa fa-lock mr-2"></i>Sign in</a> -->
                         <a class="nav-link" href="create-memorial.html">Create memorials</a>
                         <a class="nav-link mr-3" href="contact.html">Contact us</a>
                         <a class="nav-link btn btn-primary text-light" href="#"><i class="fa fa-facebook mr-2"></i>Share</a>   
@@ -83,7 +53,7 @@
 
             <section class="container-fluid">
                 <div class="row">
-                  <div class="col-md-12 bio-image">
+                  <div class="col-md-12  {{project.imageOverlay}} ">
                     <img src="{{ project.image.url }}" class=" img-responsive img-fluid" alt="Responsive image"  height=""> 
                     <div class="row">
                         <div class="col-lg-6 col-md col-sm-6">
